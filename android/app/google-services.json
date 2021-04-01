@@ -42,35 +42,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:19407965123:android:c25023513f6887609ecb76",
-        "android_client_info": {
-          "package_name": "com.tesisbrainstate"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "19407965123-d9d8suha6u30fhotppk7c24p2325ugi7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBotzAzMslp3lcYXvetfJS3ac7EJMD8EcE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "19407965123-d9d8suha6u30fhotppk7c24p2325ugi7.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"

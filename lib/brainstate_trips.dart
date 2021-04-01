@@ -56,7 +56,7 @@ class _home_trips extends State<home_trips>{
            ),
            BottomNavigationBarItem(
                icon: Icon(Icons.message),
-               title: Text("Chatbot")
+               title: Text("Chat")
            ),
            BottomNavigationBarItem(
                icon: Icon(Icons.person),

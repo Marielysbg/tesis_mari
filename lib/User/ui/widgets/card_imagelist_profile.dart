@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tesis_brainstate/Widget/card_image.dart';
 import 'package:tesis_brainstate/User/ui/screens/screen_respira.dart';
+import 'package:tesis_brainstate/User/ui/screens/soli_psico.dart';
+import 'package:tesis_brainstate/User/model/User.dart';
 
 class cardImageListProfile extends StatelessWidget{
+
+
+  cardImageListProfile({Key key, @required this.user});
+  User user = new User();
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -56,7 +64,7 @@ class cardImageListProfile extends StatelessWidget{
                   text: 'Mi psicologo',
                   onTap: (){
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => screen_respira()
+                        builder: (context) => soli_psico(user)
                     ));
                   },
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/Personal/AndroidStudioProjects/tesis_brainstate/lib/User/ui/widgets/videos_repository.dart';
+import 'videos_repository.dart';
 
 class videosRepositoryList extends StatelessWidget{
   @override

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dmaria-ifas",
+  "private_key_id": "390b8c3184fc5826b7851793648e082db475255d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3/6mb0kzlFEeB\n7wPpbOd6wJ7iDrEFUkw1C6O2j8CmftEKahMG7CrcpWuBIdYFcYkz0fZEvvVe3171\neor0ELN2Lg1uadnM/GQXbkXVGFDnb2qeTlvgIxMiydrxcHHFDpnRWpq9F6cLpPyy\nRr70W1SZsyR+t4LD9RV7tYlDy5/d2rijB4BxnLnAdAtnCFjSdz18x6YaFPRBdfDQ\neM+YvKEFqx+yQ+Eq2VY6iD5YtP5X8ZbeDXDBpV3EJh9ZAXyKgvdMlNlOZnCJH3Cj\nIY4c1VLG/X+3mzyslRclFZNJEgL9UEgdiNyftRTiaim9dAKcFRrKfj0/95AZK7zy\nCiDby5jLAgMBAAECggEAKPpHyDusQ2JiUIYuHVjTLqviVp8F/pTnAvNOKRTXx1y7\n6nFYPnTvUMeIazBhbUHtV/ydN489rzzY9ZuugY+MoDe+ZwYs6vGUywEUjVJGhlxy\nZsI1xPOayechmx67P7MyP4VJq+4uFjJO0tddpKcIbtiOOqhc945IFA6IfPBG8M3q\nIB8J64hZEFJUXUDbLCTZd7GTTb16wbw4J2cItPVFViMel570vy2iBsg5cWA5sqeI\nl2MId1FWFCeApavW8S1eOC+S+xgNeGSds1fg/wTpLgorWP9XZgyA8GA5YRnOnf4/\n73wzMH+dPvzMLvEIs5k4vTxelQ5D54g478Mrc8CWqQKBgQDZIOvVHh054rdwb2PV\nONv0f1eIwD3LqI9raPl5kAzOt+j9tLdbxKPxFLiA4IGznBNudp+oGfi4R3W4+CLR\nul644MhWewrLh/g+rYFSg5lw57XnhNl0FklZ7Bqi1sjHZxCl+EB1fBwgmppPXBwy\nHkw3ktJoGCJr7l3aKYBtiNHggwKBgQDY8GLBuRm90m8umx36Or40YVEWSSNDYGWb\nSqivEvllKjTLUqIG6yBM0lp5jeKbtTCdvuWbyEr4TPrS+xrev2c/QxWNT7aqWuSq\nZW5YFbJpa2OZOu1YWBEfMUKKV6hYso0W+R/W4XV52hnDHBV6GPNamhNWWp8O9x8W\nFA2Rj8jkGQKBgFIKoXGOhmaH5t5CCIvZhyrULwQJ94+Lal2gdZtcNaqqTQwIC7xO\nCdAfDzQLIJb4I1N62QrQfW1L+wxgHe/3JrFepfQfW83Z24/7SUEfXowN0WrghLXb\nce3bS5k55PWLWPwNWHXL5mjfYe0YlcLONehNvtj8PY1grO+w/MjmiL73AoGBANhj\nt25azxVsASDw8w71Z2JiK/rZy0Xasp8a8nVnrMK/PdgNvba+9AIM1Nhosb/1FOBU\nWT1xpW5Vgt/OPzgunbMZnDbPa3ozneFluZI9WjATQU7H25WCitmdTi0mULLgryFa\nL+ssCv0XkxjuO3IFzz/xbhZ14DCSSTzBleM7E/yJAoGBALlcqFJEzvU+tikeo8h0\nkp7RDKFNUStOhC9yHAqctMRkQgIfseU+rAGFj20Dmd5wd2LqQjbZZ2OQ03LV42Lq\nKgHTLf0nfc66M8mG9++bwswj1tzFmfesro4QFVlpLu6ByALrSRq3lRdnOqXh4103\n8YGS/Lldia5L5Jf2dc2T3Ena\n-----END PRIVATE KEY-----\n",
+  "client_email": "tesis-chatbot@dmaria-ifas.iam.gserviceaccount.com",
+  "client_id": "102723804634183242354",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tesis-chatbot%40dmaria-ifas.iam.gserviceaccount.com"
+}
