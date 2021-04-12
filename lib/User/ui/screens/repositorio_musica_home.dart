@@ -40,22 +40,37 @@ class repositorio_musica_home extends StatefulWidget{
           },
         ),
       ),
-      body: Container(
-        margin: EdgeInsets.only(
-          top: 20.0
-        ),
-          child: ListTile(
-            leading: Image.network(avatar),
-            title: Text(title),
-            subtitle: Text(author),
-            trailing:  IconButton(
+      body: GestureDetector(
+        onTap: ()async{
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => musica_class(
+            title: title,
+            url: url,
+            author: author,
+            avatar: avatar,
+          )));
+        },
+        child: Container(
+            margin: EdgeInsets.only(
+                top: 20.0
+            ),
+            child: ListTile(
+                leading: Image.network(avatar),
+                title: Text(title),
+                subtitle: Text(author),
+                trailing:  IconButton(
                   icon: Icon(Icons.arrow_forward_ios),
                   onPressed: ()async{
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => musica_class()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => musica_class(
+                      title: title,
+                      url: url,
+                      author: author,
+                      avatar: avatar,
+                    )));
                   },
+                )
             )
-          )
-      ),
+        ),
+      )
     );
   }
 

@@ -1,8 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:notification_audio_player/notification_audio_player.dart';
 
 class musica_class extends StatefulWidget{
+
+  String title, author, avatar, url;
+  musica_class({Key key, @required this.author, @required this.title, @required this.avatar, @required this.url});
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -13,21 +18,17 @@ class musica_class extends StatefulWidget{
 
 class _musica_class extends State<musica_class>{
 
-
-  String title = "Shape of Yo";
-  String author = "J.Fla";
-  String avatar = "http://p3.music.126.net/hZ2ttGYOQbL9ei9yABpejQ==/109951163032775841.jpg?param=320y320";
-  String url = "https://x2convert.com/es/Thankyou?token=U2FsdGVkX194hdLsjWbwpujROHPHffqDiy3HaIcBEOsBiMvmXmCTjOZLhLWMRXcUQUS3VEYImhfLial7e7%2bCFvyuXZ1gT5FDBvMR903jIJqZHQfzd4%2bHCIoFnBVf4mVaKlnbOSOwR6ggYofMPoPLetPD2yHr5rdtRtDsworailOfJhoKatTDL9bVknBYhRfa1%2f9Wy50nUgusM2ERU1z94ZFsfih5nXcl5nYs%2fvuMRag%3d&s=youtube&id=&h=4760418728908101522";
   NotificationAudioPlayer notificationAudioPlayer = NotificationAudioPlayer();
-
+  bool playState = true;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.indigo,
       appBar: AppBar(
         title: Text(
-            'Repositorio de música'
+            'Reproductor'
         ),
         centerTitle: true,
         toolbarHeight: 70.0,
@@ -40,12 +41,99 @@ class _musica_class extends State<musica_class>{
         ),
       ),
       body: Container(
-          margin: EdgeInsets.only(
-              top: 20.0
-          ),
+        margin: EdgeInsets.only(
+          top: 70.0
+        ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Center(
+                child: Container(
+                  height: 300.0,
+                  width: 300.0,
+                  child:  CircleAvatar(
+                    backgroundImage: NetworkImage(widget.avatar),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 30.0
+                ),
+                child: Text(
+                  widget.title,
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                    top: 5.0
+                ),
+                child: Text(
+                    widget.author,
+                  maxLines: 3,
+                  style: TextStyle(
+                      fontSize: 17.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
+              ),
+              Spacer(),
+              Container(
+                height: 100.0,
+                decoration: BoxDecoration(
+                  color: Color(0xFFFF5252),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(90.0),
+                      topRight: Radius.circular(90.0),
+                    ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                   IconButton(
+                        icon: Icon(playState ? Icons.play_arrow : Icons.pause, color: Colors.white,
+                        ),
+                        iconSize: 50.0,
+                        onPressed: ()async{
+                          String state = await notificationAudioPlayer.playerState;
+                          if (playState == true){
+                            if(state == "PAUSED"){
+                              print(await notificationAudioPlayer.resume());
+                              print(await notificationAudioPlayer.duration);
+                              print(await notificationAudioPlayer.currentPosition);
+                              setState(() {
+                                playState = false;
+                              });
+                            } else{
+                              print(await notificationAudioPlayer.playerState);
+                              print(
+                                  await notificationAudioPlayer.play(
+                                      widget.title,
+                                      widget.author,
+                                      widget.avatar,
+                                      widget.url));
+                              setState(() {
+                                playState = false;
+                              });
+                            }
+                          } else{
+                            setState(() {
+                              playState = true;
+                            });
+                            print(await notificationAudioPlayer.pause());
+                          }
 
+                        },
+                    )
+                  ],
+                ),
+              )
             ],
           )
         /*Column(children: [
