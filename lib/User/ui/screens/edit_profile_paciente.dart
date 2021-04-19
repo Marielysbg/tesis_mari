@@ -32,6 +32,7 @@ class _edit_profile_paciente extends State<edit_profile_paciente> {
     print(id);
 
     return Scaffold(
+
       appBar: AppBar(
         centerTitle: true,
         toolbarHeight: 70.0,
