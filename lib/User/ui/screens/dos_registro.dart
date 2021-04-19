@@ -302,10 +302,17 @@ class _dos_registro extends State<dos_registro>{
     CollectionReference ver = Firestore.instance.collection('VERIFICACION');
     CollectionReference msj = Firestore.instance.collection('MensajesP');
     CollectionReference pac = Firestore.instance.collection('PACIENTES');
+    CollectionReference fav = Firestore.instance.collection('FAVORITOS');
     CollectionReference psi = Firestore.instance.collection('PSICOLOGOS');
     CollectionReference emo = Firestore.instance.collection('EMOCIONES');
     if (widget.user.rol == "Paciente") {
       await pac.document(widget.user.uid).setData(widget.user.toJsonPaciente());
+      await emo.document(widget.user.uid).setData({
+        'uid': widget.user.uid,
+      });
+      await fav.document(widget.user.uid).setData({
+        'uid': widget.user.uid,
+      });
       await ref.document(widget.user.uid).setData(widget.user.toJsonPaciente()).whenComplete(() =>
           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => tres_registro(widget.user, userf))));
     } else if(widget.user.rol == "Psicologo"){
@@ -317,9 +324,6 @@ class _dos_registro extends State<dos_registro>{
         await msj.document(widget.user.uid).setData({
           'uid': widget.user.uid,
           'foto': widget.user.foto
-        });
-        await emo.document(widget.user.uid).setData({
-          'uid': widget.user.uid,
         });
       });
 

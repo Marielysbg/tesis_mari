@@ -35,7 +35,7 @@ class soli_psico extends StatelessWidget {
                   String acep = user.aceptado;
                  String soli = user.soli;
                  print(soli);
-                  return acep != null ? psico_aceptado(user) : soli == 'null' ? Scaffold(
+                  return acep != null ? psico_aceptado(user) : soli == null ? Scaffold(
                       appBar: AppBar(
                         toolbarHeight: 70.0,
                         backgroundColor: Colors.indigo,
@@ -170,6 +170,7 @@ class soli_psico extends StatelessWidget {
                                     height: 230.0,
                                     color: Colors.indigo,
                                     child: IconButton(
+                                      onPressed: (){},
                                       icon: Icon(Icons.arrow_back),
                                     ),
                                   ),
